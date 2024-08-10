@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BINARY WORLD</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+        #displayme {
+            color: blue;
+        }
+
+        .meathide {
+            width: 100px;
+            height: 100px;
+        }
+
+        .meatsplode {
+            width: 100px;
+            height: 100px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="everything">
+        <input hidden type="checkbox" id="trigger">
+        <div id="header">
+            <h1>CLICK HERE REVEAL THE SHOCKING TRUTH!!!</h1>
+        </div>
+
+        <h2 hidden id="overload">OVERLOAD</h2>
+
+
+        <div id='jtest' class="jclasses ">
+            <img class="meathide" id="jhide" src="meat.jpg">
+            <img class="meatsplode" id="jgif" src="rexplode.gif" hidden>
+            <div id="jtext" class="xyquee" hidden>
+                <p>
+                    #ONLINE ACTIVISM DOES NOTHING! </p>
+            </div>
+        </div>
+
+        <div id='jsecond' class="jclasses ">
+            <img class="meathide" id="jhide2" src="meat.jpg">
+            <img class="meatsplode" id="jgif2" src="rexplode.gif" hidden>
+            <div id="j2ext" class="xquee" hidden>
+                <p>
+                    #CYBERFEMINISM ONLY HAPPENS IN THE WEST! </p>
+            </div>
+        </div>
+
+
+        <div id='j3' class="jclasses ">
+            <img class="meathide" id="jhide3" src="meat.jpg">
+            <img class="meatsplode" id="jgif3" src="rexplode.gif" hidden>
+            <div id="j3ext" class="yquee" hidden>
+                <p>
+                    #CYBERFEMINISTS ARE JUST MISANDRISTS! </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id='j4' class="jclasses ">
+        <img class="meathide" id="jhide4" src="meat.jpg">
+        <img class="meatsplode" id="jgif4" src="rexplode.gif" hidden>
+        <div id="j4ext" class="xquee" hidden>
+            <p>
+                #WE CAN CHANGE NOTHING! </p>
+        </div>
+    </div>
+    </div>
+
+
+    <div id='j5' class="jclasses ">
+        <img class="meathide" id="jhide5" src="meat.jpg">
+        <img class="meatsplode" id="jgif5" src="rexplode.gif" hidden>
+        <div id="j5ext" class="xyquee" hidden>
+            <p>
+                #CYBERACTIVISM IS THE ONLY GOOD ACTIVISM! </p>
+        </div>
+    </div>
+    </div>
+
+
+    <div id='j6' class="jclasses ">
+        <img class="meathide" id="jhide6" src="meat.jpg">
+        <img class="meatsplode" id="jgif6" src="rexplode.gif" hidden>
+        <div id="j6ext" class="yquee" hidden>
+            <p>
+                #USELESS! </p>
+        </div>
+    </div>
+    </div>
+
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+
+    <script>
+        var counter = 0;
+        document.getElementById("trigger").checked = false;
+
+
+        // $("#jtext").hide();
+        // $("jtext").attr("hidden", "")
+
+        // THIS WAS THE ORIGINAL FUNCTION I USED TO HIDE SHIT
+        // function hide(obj) {
+
+        //     var el = document.getElementById(obj);
+
+        //     el.style.display = 'none';
+
+        //     var sh = document.getElementById("displayme");
+        //     // var sh = $("#displayme"); this is the jquery version of getting the doc.getelement
+        //     sh.style.display = 'block';
+        //     sh.style.color = 'blue';
+
+
+        // }
+
+        // THIS IS THE FUNCTION I USED WITHOUT JQUERY 
+        // function mega(obj) {
+        //     console.log('TESTING EN MASSE');
+        //     var effectThese = document.getElementById(obj).children;
+        //     console.log(effectThese[0]);
+        //     effectThese[0].style.display = 'none';
+        //     effectThese[1].style.display = 'block';
+        //     counter += 1;
+        //     console.log(counter);
+        //     ending(counter);
+
+        // }
+
+        function ending(count) {
+            if (count >= 4) {
+                console.log("hello");
+                listEls = document.getElementsByClassName("jclasses");
+                console.log("HELLO");
+                console.log(listEls);
+                for (let i = 0; i < listEls.length; i++) {
+                    console.log("ATTENTION");
+                    console.log(listEls[i]);
+
+                    ;
+                }
+
+                console.log(document.getElementById("trigger").checked);
+                document.getElementById("trigger").checked = true;
+                console.log(document.getElementById("trigger").checked);
+                document.getElementById("jtext").style.animationDuration = "3s";
+                document.getElementById("j2ext").style.animationDuration = "3s";
+                document.getElementById("j3ext").style.animationDuration = "3s";
+                document.getElementById("j4ext").style.animationDuration = "3s";
+                document.getElementById("j5ext").style.animationDuration = "3s";
+                document.getElementById("j6ext").style.animationDuration = "3s";
+
+                setTimeout(function () {
+                    console.log('SCREEN FALL');
+                    $("h2").removeAttr("hidden");
+
+                    document.body.style.backgroundImage = "url('shatter.jpg')";
+                    document.getElementById("header").style.display = "none";
+                }, 2000)
+
+                setTimeout(function () {
+                    document.getElementById("everything").style.display = "none";
+                    document.body.style.backgroundImage = "url('blackscreen.jpg')";
+
+                }, 5000)
+
+                setTimeout(function () {
+                    window.open("next.html", '_self');
+
+                }, 5500)
+
+            }
+        }
+
+        // THIS IS THE JQUERY FUNCTION 
+
+        $("#jtest").click(function () {
+            $(this).children(".meathide").fadeOut(400);
+            $(this).children(".meatsplode").removeAttr("hidden");
+            $(this).children(".meatsplode").fadeOut(1600);
+
+
+
+            // $("#jtext").toggle();
+            $(this).children("div").removeAttr("hidden");
+            counter += 1;
+            ending(counter);
+
+        });
+
+        $("#jsecond").click(function () {
+            $(this).children(".meathide").fadeOut(400);
+            $(this).children(".meatsplode").removeAttr("hidden");
+            $(this).children(".meatsplode").fadeOut(1600);
+
+
+
+            // $("#jtext").toggle();
+            $(this).children("div").removeAttr("hidden");
+            counter += 1;
+            ending(counter);
+
+        });
+
+
+        $("#j3").click(function () {
+            $(this).children(".meathide").fadeOut(400);
+            $(this).children(".meatsplode").removeAttr("hidden");
+            $(this).children(".meatsplode").fadeOut(1600);
+
+
+
+            // $("#jtext").toggle();
+            $(this).children("div").removeAttr("hidden");
+            counter += 1;
+            ending(counter);
+
+        });
+
+
+        $("#j4").click(function () {
+            $(this).children(".meathide").fadeOut(400);
+            $(this).children(".meatsplode").removeAttr("hidden");
+            $(this).children(".meatsplode").fadeOut(1600);
+
+
+
+            // $("#jtext").toggle();
+            $(this).children("div").removeAttr("hidden");
+            counter += 1;
+            ending(counter);
+
+        });
+
+
+        $("#j5").click(function () {
+            $(this).children(".meathide").fadeOut(400);
+            $(this).children(".meatsplode").removeAttr("hidden");
+            $(this).children(".meatsplode").fadeOut(1600);
+
+
+
+            // $("#jtext").toggle();
+            $(this).children("div").removeAttr("hidden");
+            counter += 1;
+            ending(counter);
+
+        });
+
+
+        $("#j6").click(function () {
+            $(this).children(".meathide").fadeOut(400);
+            $(this).children(".meatsplode").removeAttr("hidden");
+            $(this).children(".meatsplode").fadeOut(1600);
+
+
+
+            // $("#jtext").toggle();
+            $(this).children("div").removeAttr("hidden");
+            counter += 1;
+            ending(counter);
+
+        });
+
+
+        // $("jtext").animate({animation: "xyquee 9s linear infinite",}, "slow", )
+
+
+    </script>
+
+</body>
+
+</html>

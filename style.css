@@ -1,0 +1,204 @@
+body {
+    /* background-color: white; */
+    background-image: url("bi.jpg");
+    /* background-repeat: no-repeat; */
+    /* background-size: inherit; */
+    color: black;
+    font-family: Verdana;
+    
+}
+
+#header {
+    background-color: black;
+    color: rgb(255, 0, 225);
+    /* overflow: hidden; */
+    text-align: center;
+    position: absolute; 
+    top: 0; 
+    width: 100%;
+    left: 0; 
+    /* top: -100;
+    left: -100; */
+}
+
+#header > h1 {
+    animation: flash 0.2s linear infinite; 
+
+}
+
+div {
+    min-height: 100px;
+}
+
+.jclasses {
+    position: relative;
+    /* display: inline; */
+}
+
+#jsecond {
+    left: 10%;
+}
+
+#j3 {
+    left: 60%;
+}
+
+#j4 {
+    left: 10%;
+}
+
+
+#j5 {
+    left: 80%;
+}
+
+
+#j6 {
+    left: 30%;
+}
+
+.meathide {
+    z-index: 2;
+    position: absolute;
+}
+
+.meatsplode {
+    position: absolute;
+    z-index: 1;
+}
+
+/* The animation */
+@keyframes xquee {
+    0% {
+        transform: translateX(100%);
+
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0; 
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* @keyframes textChange {
+    
+    50% {
+        font-size: 30px;
+        /* color: pink; */
+/* }
+
+} */
+
+h2 {
+    text-align: center;
+    top: 60;
+    font-size: 50px;
+    color: red;
+    animation: flash 0.1s linear infinite;
+}
+
+
+@keyframes textChange {
+    0% {
+        color: pink;
+    }
+
+    50% {
+        font-size: 20px;
+        color: purple;
+    }
+
+    100% {
+        color: blue;
+    }
+}
+
+@keyframes yquee {
+    0% {
+        transform: translateY(100%);
+        color: pink;
+    }
+
+    50% {
+        font-size: 10px;
+        color: purple;
+    }
+
+    100% {
+        transform: translateY(-100%);
+        color: blue;
+    }
+}
+
+
+@keyframes xyquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+/* media query to enable animation for only those who want it
+@media (prefers-reduced-motion: no-preference) {
+    .xquee {
+        animation: xquee 9s linear infinite;
+    }
+
+    .yquee {
+        animation: yquee 9s linear infinite;
+
+    }
+
+    .xyquee {
+        animation: xyquee 9s linear infinite;
+
+    }
+
+/* 
+    div>p {
+        animation: textChange 8s linear infinite;
+
+    } */
+
+
+/* } */
+
+.xquee {
+    animation: xquee 9s linear infinite;
+}
+
+.yquee {
+    animation: yquee 9s linear infinite;
+
+}
+
+.xyquee {
+    animation: xyquee 9s linear infinite;
+
+}
+
+#ugh {
+    animation: xquee 9s linear infinite;
+}
+
+.jclasses {
+    animation: textChange 9s linear infinite; 
+}

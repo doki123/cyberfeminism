@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBFERFEMINISM AND THE GOVERNMENT</title>
+  <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+  <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  <!-- <script src="script.js" type=“text/javascript”></script> -->
+
+</head>
+
+<body>
+  <!-- <h1>Have a few different pages; when you click on an object it explodes and reveals a paragraph of text about cyberfeminism and the government -->
+  <!-- clicking on that text will take you to a different page analyzing how cybberfeminism made a social change + an annotated bibliography citing the sources used</h1> -->
+
+  <p>research javascript -> when an image is clicked, it first triggers a gif of the meat exploding, then using the
+    marquee tag make the text bounce around; see if you can use javascript to increase the speeds at which
+    they bounce / change the angle? scatter the paragraphs around the screen so that they look cluttered (check z-index
+    if there are overlap issues);
+    once all the meat is clicked / a certain variable threshold is passed (have it go up for every meat smash) trigger a
+    "cutscene" of descending text all at once, at which point the screen
+    has a shatter effect overlay and it "resets"; the user clicks through and....figure that part out -> have it
+    redirect to a separate page where ressearch is presented in an artsy way alongside annotations? maybe use new art
+    city to show a "3D" environment, but the lag might take a while
+    ADD a hidden ting to both the images and the paragraphs; on clcik switch the linked paragraph to non-hidden and hide
+    the image (see if you can do a single-nonlooping transparent gif? three seconds and then also hidden maybe)
+    office cubicle? neat and tidy, not disorderly, looks very stifling; have tihngs that are obviously out of place;
+    represents how these things are buried under the surface and waiting to escape
+  </p>
+  <p>
+    THREE TYPES OF MARQUEE ANIMATION -- first do perfecly
+  </p>
+
+  <p>INLINE HTML</p>
+  <a href="test.html"><img src="meat.jpg" height="50" width="50" onclick="this.remove()"></a> <!-- THIS METHOD JUST DELETES IT DIRECTLY-->
+  
+  <marquee><p hidden id="displayme">SCRIPT TAG</p></marquee>
+  <img src="meat.jpg" height="50" width="50" id="hideme" onclick="hide('hideme')">
+  <!-- THIS METHOD USES SCRIPT INSIDE HTML -->
+  <p>SCRIPT.JS</p>
+  <img src="meat.jpg" height="50" width="50" id="hideme2">
+  <!-- TRY USING SCRIPT.JS -->
+
+  <div class="message">
+    <!-- <p>This is a paragraph! Here's how you make a link: <a href="https://neocities.org">Neocities</a>.</p> -->
+
+    <marquee>
+      <p>THIS IS REASEASRHC</p>
+    </marquee>
+    <p> THIS IS MORE RESEARCH </p>
+
+  </div>
+
+
+  <script>
+    function hide(obj) {
+      console.log('fukc');
+
+      var el = document.getElementById(obj);
+
+      el.style.display = 'none';
+
+      document.getElementById("displayme").style.display = 'block';
+
+      // var sh = document.getElementById('displayme');
+      // console.log('sh');
+      // sh.style.display = 'none';
+
+
+    }
+
+  </script>
+
+
+  <!-- <p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p> -->
+</body>
+
+</html>
